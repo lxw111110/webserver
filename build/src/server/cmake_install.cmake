@@ -1,4 +1,4 @@
-# Install script for directory: /home/l/Workspace/webserver/src/app
+# Install script for directory: /home/l/Workspace/webserver/src/server
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

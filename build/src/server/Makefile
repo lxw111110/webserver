@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/l/Workspace/webserver/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/l/Workspace/webserver/build/CMakeFiles /home/l/Workspace/webserver/build/src/module/CMakeFiles/progress.marks
-	cd /home/l/Workspace/webserver/build && $(MAKE) -f CMakeFiles/Makefile2 src/module/all
+	cd /home/l/Workspace/webserver/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/l/Workspace/webserver/build/CMakeFiles /home/l/Workspace/webserver/build/src/server/CMakeFiles/progress.marks
+	cd /home/l/Workspace/webserver/build && $(MAKE) -f CMakeFiles/Makefile2 src/server/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/l/Workspace/webserver/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/l/Workspace/webserver/build && $(MAKE) -f CMakeFiles/Makefile2 src/module/clean
+	cd /home/l/Workspace/webserver/build && $(MAKE) -f CMakeFiles/Makefile2 src/server/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,12 +97,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/l/Workspace/webserver/build && $(MAKE) -f CMakeFiles/Makefile2 src/module/preinstall
+	cd /home/l/Workspace/webserver/build && $(MAKE) -f CMakeFiles/Makefile2 src/server/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/l/Workspace/webserver/build && $(MAKE) -f CMakeFiles/Makefile2 src/module/preinstall
+	cd /home/l/Workspace/webserver/build && $(MAKE) -f CMakeFiles/Makefile2 src/server/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
@@ -111,46 +111,46 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/module/CMakeFiles/hello.dir/rule:
-	cd /home/l/Workspace/webserver/build && $(MAKE) -f CMakeFiles/Makefile2 src/module/CMakeFiles/hello.dir/rule
-.PHONY : src/module/CMakeFiles/hello.dir/rule
+src/server/CMakeFiles/myserver.dir/rule:
+	cd /home/l/Workspace/webserver/build && $(MAKE) -f CMakeFiles/Makefile2 src/server/CMakeFiles/myserver.dir/rule
+.PHONY : src/server/CMakeFiles/myserver.dir/rule
 
 # Convenience name for target.
-hello: src/module/CMakeFiles/hello.dir/rule
+myserver: src/server/CMakeFiles/myserver.dir/rule
 
-.PHONY : hello
+.PHONY : myserver
 
 # fast build rule for target.
-hello/fast:
-	cd /home/l/Workspace/webserver/build && $(MAKE) -f src/module/CMakeFiles/hello.dir/build.make src/module/CMakeFiles/hello.dir/build
-.PHONY : hello/fast
+myserver/fast:
+	cd /home/l/Workspace/webserver/build && $(MAKE) -f src/server/CMakeFiles/myserver.dir/build.make src/server/CMakeFiles/myserver.dir/build
+.PHONY : myserver/fast
 
-hello.o: hello.cpp.o
+server.o: server.c.o
 
-.PHONY : hello.o
+.PHONY : server.o
 
 # target to build an object file
-hello.cpp.o:
-	cd /home/l/Workspace/webserver/build && $(MAKE) -f src/module/CMakeFiles/hello.dir/build.make src/module/CMakeFiles/hello.dir/hello.cpp.o
-.PHONY : hello.cpp.o
+server.c.o:
+	cd /home/l/Workspace/webserver/build && $(MAKE) -f src/server/CMakeFiles/myserver.dir/build.make src/server/CMakeFiles/myserver.dir/server.c.o
+.PHONY : server.c.o
 
-hello.i: hello.cpp.i
+server.i: server.c.i
 
-.PHONY : hello.i
+.PHONY : server.i
 
 # target to preprocess a source file
-hello.cpp.i:
-	cd /home/l/Workspace/webserver/build && $(MAKE) -f src/module/CMakeFiles/hello.dir/build.make src/module/CMakeFiles/hello.dir/hello.cpp.i
-.PHONY : hello.cpp.i
+server.c.i:
+	cd /home/l/Workspace/webserver/build && $(MAKE) -f src/server/CMakeFiles/myserver.dir/build.make src/server/CMakeFiles/myserver.dir/server.c.i
+.PHONY : server.c.i
 
-hello.s: hello.cpp.s
+server.s: server.c.s
 
-.PHONY : hello.s
+.PHONY : server.s
 
 # target to generate assembly for a file
-hello.cpp.s:
-	cd /home/l/Workspace/webserver/build && $(MAKE) -f src/module/CMakeFiles/hello.dir/build.make src/module/CMakeFiles/hello.dir/hello.cpp.s
-.PHONY : hello.cpp.s
+server.c.s:
+	cd /home/l/Workspace/webserver/build && $(MAKE) -f src/server/CMakeFiles/myserver.dir/build.make src/server/CMakeFiles/myserver.dir/server.c.s
+.PHONY : server.c.s
 
 # Help Target
 help:
@@ -159,11 +159,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... hello"
+	@echo "... myserver"
 	@echo "... edit_cache"
-	@echo "... hello.o"
-	@echo "... hello.i"
-	@echo "... hello.s"
+	@echo "... server.o"
+	@echo "... server.i"
+	@echo "... server.s"
 .PHONY : help
 
 

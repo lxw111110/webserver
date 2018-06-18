@@ -111,30 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named myserver
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
-.PHONY : main
+myserver: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 myserver
+.PHONY : myserver
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) -f src/app/CMakeFiles/main.dir/build.make src/app/CMakeFiles/main.dir/build
-.PHONY : main/fast
-
-#=============================================================================
-# Target rules for targets named hello
-
-# Build rule for target.
-hello: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 hello
-.PHONY : hello
-
-# fast build rule for target.
-hello/fast:
-	$(MAKE) -f src/module/CMakeFiles/hello.dir/build.make src/module/CMakeFiles/hello.dir/build
-.PHONY : hello/fast
+myserver/fast:
+	$(MAKE) -f src/server/CMakeFiles/myserver.dir/build.make src/server/CMakeFiles/myserver.dir/build
+.PHONY : myserver/fast
 
 # Help Target
 help:
@@ -144,8 +131,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... main"
-	@echo "... hello"
+	@echo "... myserver"
 .PHONY : help
 
 
